@@ -1,0 +1,23 @@
+bbPOV quality-improved build
+
+Software-side improvements added:
+1. Browser converter uses high-quality image smoothing before polar conversion.
+2. Polar conversion uses bilinear sampling instead of nearest-pixel rounding.
+3. Auto contrast boost, saturation boost, and mild gamma adjustment during conversion.
+4. Lightweight sharpen filter before upload.
+5. JPEG upload quality increased from 0.85 to 0.92.
+6. Video conversion changed from 15 FPS / 120 frames to 20 FPS / 160 frames.
+7. Firmware RGB565 output now expands colors correctly and applies gamma correction table before APA102 output.
+
+Upload settings reminder:
+Board: ESP32S3 Dev Module
+Flash Size: 16MB
+Partition Scheme: Custom / included partitions.csv
+PSRAM: Enabled / OPI PSRAM if available
+Pins: APA102 DATA GPIO11, CLOCK GPIO12, Hall GPIO4
+
+After uploading firmware:
+1. Connect WiFi: bbPOV-Fan / 12345678
+2. Open: 192.168.4.1
+3. Hard refresh browser: Command + Shift + R
+4. Delete old media and re-upload images/videos so they are reconverted with the new quality pipeline.

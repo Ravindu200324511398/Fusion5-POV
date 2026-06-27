@@ -1,0 +1,16 @@
+QUALITY_SOFTWARE_v2_OTA
+
+Includes previous quality improvements:
+- Gamma correction
+- Contrast/saturation/sharpen conversion improvements
+- Better image smoothing
+- Bilinear polar conversion
+- JPEG quality 0.92
+- Video conversion 20fps
+
+New OTA additions:
+- Web firmware update page at /update
+- ArduinoOTA network update support
+- Hostname: bbpov-fan
+- OTA password: 12345678
+- Stops display and detaches hall interrupt during update for stability
